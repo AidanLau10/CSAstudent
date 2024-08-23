@@ -1,9 +1,9 @@
-title: Nighthawk Pages 
-description: "Class of 2025"
-owner_name: John Mortensen
+title: StudentCSA 
+description: "2025 CSA Student"
+owner_name: Aidan Lau
 github_username: nighthawkcoders
-github_repo: "student_2025" 
-baseurl: "/student_2025"
+github_repo: "CSAstudent" 
+baseurl: "/CSAstudent"
 future: true
 remote_theme: jekyll/minima
 minima:
