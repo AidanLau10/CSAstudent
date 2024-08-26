@@ -1,9 +1,9 @@
-title: AidanCSA 
+title: Aidan_2025 
 description: "2025 CSA Student"
 owner_name: Aidan Lau
 github_username: nighthawkcoders
-github_repo: "CSAstudent" 
-baseurl: "/CSAstudent"
+github_repo: "Aidan_2025" 
+baseurl: "/aidan_2025"
 future: true
 remote_theme: jekyll/minima
 minima:

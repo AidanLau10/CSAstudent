@@ -162,6 +162,17 @@ div.desc {
 .submenu:hover .submenu-content {
   display: block;
 }
+
+}
+#factDisplay {
+    font-size: 20px;
+    margin: 20px 0;
+}
+#generateBtn {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
 </style>
 </head>
 <body>
@@ -173,6 +184,7 @@ div.desc {
   <a href="{{site.baseurl}}/about">About</a>
 </div>
 <!-- <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/6MXWK7edsydhiPEs07RDkO?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe> -->
+
 
 <div style="padding-bottom: 50px">
   <img src="images/frontpage/freeform.png" style="width:100%">
@@ -224,7 +236,8 @@ div.desc {
   <span class="dot" onclick="currentSlide(3)"></span> 
 </div>
 
-
+<div id="factDisplay">Click the button to see a fun fact!</div>
+<button id="generateBtn">Generate Fun Fact</button>
 <script>
 let slideIndex = 1;
 showSlides(slideIndex);
@@ -252,6 +265,23 @@ function showSlides(n) {
   slides[slideIndex-1].style.display = "block";  
   dots[slideIndex-1].className += " active";
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+    const facts = [
+        "I can solve a Rubiks cube. My fastest time was 6 seconds",
+        "My favorite subject is math",
+        "I'm going to 2 concerts in September: Rocco and wave to earth",
+        "I can build keyboards.",
+    ];
+
+    const factDisplay = document.getElementById('factDisplay');
+    const generateBtn = document.getElementById('generateBtn');
+
+    generateBtn.addEventListener('click', function() {
+        const randomIndex = Math.floor(Math.random() * facts.length);
+        factDisplay.textContent = facts[randomIndex];
+    });
+});
 </script>
 
 </body>
